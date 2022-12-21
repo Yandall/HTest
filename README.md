@@ -106,7 +106,7 @@ Checks if the element have the given `attribute`
 ```nim
 template toHaveNthAttributes(hTest: HTest, amount: int)
 ```
-Checks if the element have n `amount` of attribute`
+Checks if the element have n `amount` of attributes
 
 ```nim
 template innerTextToBe(hTest: HTest, text: string)
