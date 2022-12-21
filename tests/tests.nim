@@ -3,7 +3,6 @@ import htest
 let html = """
 <!DOCTYPE html>
 <html>
-hola
   <head><title>Example</title></head>
   <body>
     <p id="unique">1</p>
