@@ -99,9 +99,10 @@ template toContainNthElements(hTest: HTest, cssQuery: string, amount: int)
 Checks if there are n `amount` of elements described by `cssQuery`
 
 ```nim
-template toHaveAttribute(hTest: HTest, attribute: string)
+template toHaveAttribute(hTest: HTest, attribute: string, value = "")
 ```
-Checks if the element have the given `attribute`
+Checks if the element have the given `attribute`.
+If you set `value` it will check if the `attribute` has `value`
 
 ```nim
 template toHaveNthAttributes(hTest: HTest, amount: int)

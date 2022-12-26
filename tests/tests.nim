@@ -40,6 +40,9 @@ suite "Testing different statements":
 
   test "Element have attributes":
     check(html).select("#unique").toHaveAttribute("id")
+  
+  test "Element have attribute with value 'unique'":
+    check(html).select("p").toHaveAttribute("id", "unique")
 
   test "Element has exactly 1 attributes":
     check(html).select("#unique").toHaveNthAttributes(1)

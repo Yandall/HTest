@@ -54,9 +54,12 @@ template toContainNthElements*(hTest: HTest, cssQuery: string, amount: int) =
   ## Checks if there are n `amount` of elements described by `cssQuery`
   check hTest.html.querySelectorAll(cssQuery).len == amount xor hTest.useNot
 
-template toHaveAttribute*(hTest: HTest, attribute: string) =
+template toHaveAttribute*(hTest: HTest, attribute: string, value = "") =
   ## Checks if the element have the given `attribute`
-  check hTest.html.attr(attribute) != "" xor hTest.useNot
+  ## If you set `value` it will check if the `attribute` has `value`
+  check hTest.html.attr(attribute) != "" xor hTest.useNot 
+  if (value != ""):
+    check hTest.html.attr(attribute) == value
 
 template toHaveNthAttributes*(hTest: HTest, amount: int) =
   ## Checks if the element have n `amount` of attribute`
