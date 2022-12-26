@@ -9,7 +9,7 @@ srcDir        = "src"
 
 # Dependencies
 
-requires "nim >= 1.6.8", "nimquery"
+requires "nim >= 0.20.0", "nimquery"
 
 task test, "Run tests":
   exec "nim c -r --verbosity:0 tests/tests"
